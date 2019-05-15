@@ -36,11 +36,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     boolean isPalindrome(String toCheck){
+        toCheck = stringCleaner(toCheck);
+
         for (int i = 0; i < (toCheck.length() / 2); i++){
             if (toCheck.charAt(i) != toCheck.charAt(toCheck.length() - 1 - i)){
                 return false;
             }
         }
         return true;
+    }
+
+    String stringCleaner(String unclean){
+        return unclean.toLowerCase()
+                      .replaceAll("\\s","")
+                      .replaceAll("[^a-zA-Z0-9]","");
     }
 }
