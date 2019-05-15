@@ -3,6 +3,6 @@
     <string name="button_check_text">Palindrome?</string>
     <string name="edit_instructions">Type something to check.</string>
     <string name="text_palindrome_results">Results printed here.</string>
-    <string name="success_text">\ is a palindrome!</string>
+    <string name="success_text">is a palindrome!</string>
     <string name="failure_text">is not a palindrome.</string>
 </resources>

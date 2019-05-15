@@ -2,6 +2,7 @@ package com.example.palindromechecker;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -26,10 +27,12 @@ public class MainActivity extends AppCompatActivity {
         buttonCheck.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (isPalindrome(editToCheck.getText().toString())){
-                    textResults.setText(R.string.success_text);
+                String stringToCheck = editToCheck.getText().toString();
+                if (isPalindrome(stringToCheck)){
+                    // TODO: figure out how to prepend a string to a r.string.value 
+                    textResults.setText(stringToCheck + " is a palindrome.");
                 } else {
-                    textResults.setText(R.string.failure_text);
+                    textResults.setText(stringToCheck + " is not a palindrome.");
                 }
             }
         });
