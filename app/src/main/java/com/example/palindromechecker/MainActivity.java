@@ -29,7 +29,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String stringToCheck = editToCheck.getText().toString();
                 if (isPalindrome(stringToCheck)){
-                    // TODO: figure out how to prepend a string to a r.string.value 
+                    // TODO: figure out how to prepend a string to a r.string.value
+                    // TextView objects append() function does not accept resIDs :(
                     textResults.setText(stringToCheck + " is a palindrome.");
                 } else {
                     textResults.setText(stringToCheck + " is not a palindrome.");
